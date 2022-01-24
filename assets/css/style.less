@@ -1,0 +1,248 @@
+
+@pink: #FF779A;
+@blue: #00B6DD;
+@dark-blue: #081580;
+
+// Общие
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  margin: auto;
+  font-size: 62px;
+  line-height: 68px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 1.4px;
+  width: 100%;
+  max-width: 650px;
+  font-weight: 700;
+
+  @media (max-width: 1199px) {
+    font-size: 54px;
+    line-height: 60px;
+    letter-spacing: 1.2px;
+    max-width: 584px;
+  }
+
+  @media (max-width: 991px) {
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    max-width: 358px;
+  }
+
+  @media (max-width: 575px) {
+    font-size: 46px;
+    line-height: 48px;
+    letter-spacing: 1px;
+    max-width: 240px;
+  }
+}
+
+// Header
+.header {
+  background: url("../img/header.png") no-repeat;
+  width: 100%;
+  padding: 120px 0 140px 0;
+
+  @media (max-width: 1199px) {
+    padding: 100px 0 120px 0;
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0 100px 0;
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0 100px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0 80px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 60px 0 70px 0;
+  }
+}
+
+// Cards
+.cards {
+  padding: 100px 0 120px 0;
+
+  @media (max-width: 1199px) {
+    padding: 89px 0 91px 0;
+  }
+
+  @media (max-width: 991px) {
+    padding: 60px 0 70px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 50px 0 60px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 50px 0 60px 0;
+  }
+
+  .cards__row {
+    margin-bottom: -30px;
+  }
+
+  .cards__col {
+    margin-bottom: 30px;
+  }
+
+  .cards__col:nth-child(2), .cards__col:nth-child(5) {
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
+    .cards__col:nth-child(4), .cards__col:nth-child(6) {
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+  .cards__wrap {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D3D8E4;
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    height: 100%;
+
+    @media (max-width: 1199px) {
+      max-width: 465px;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 546px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 575px) {
+      max-width: 290px;
+    }
+  }
+
+  .cards__background {
+    width: 100%;
+    max-width: 300px;
+    height: 170px;
+    background: #D3D8E4;
+
+    @media (max-width: 1199px) {
+      max-width: 405px;
+    }
+
+    @media (max-width: 991px) {
+      height: 150px;
+    }
+
+    @media (max-width: 767px) {
+      max-width: 490px;
+      height: 150px;
+    }
+
+    @media (max-width: 575px) {
+      max-width: 258px;
+    }
+  }
+
+  .cards__background--pink {
+    background: @pink;
+  }
+
+  .cards__background--blue {
+    background: @blue;
+  }
+
+  .cards__img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .cards__category {
+    background: @blue;
+    position: absolute;
+    top:12px;
+    left: 0;
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    padding: 6px 14px 8px 14px;
+    color: #fff;
+  }
+
+  .cards__category--dark {
+    background: @dark-blue;
+  }
+
+  .cards__author {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0.8px;
+    color: @blue;
+    margin-top: 20px;
+  }
+
+  .cards__author--dark {
+    color: @dark-blue;
+  }
+
+  .cards__title {
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+    color: #010101;
+    margin-top: 6px;
+  }
+
+  .cards__content {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.8px;
+    color: #010101;
+    margin-top: 16px;
+    margin-bottom: 30px;
+  }
+
+  .cards__btn {
+    border: 2px solid @blue;
+    background: @blue;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.8px;
+    color: white;
+    width: 100%;
+    max-width: 150px;
+    height: 40px;
+    margin: auto auto 0 0;
+  }
+
+  .cards__btn--dark {
+    background: @dark-blue;
+    border: 2px solid @dark-blue;
+  }
+
+  .cards__btn--dark:hover {
+    opacity: 0.6;
+  }
+
+  .cards__btn:hover {
+    opacity: 0.6;
+    background: @blue;
+    border: 2px solid @blue;
+  }
+}
